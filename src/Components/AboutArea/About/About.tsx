@@ -7,3 +7,5 @@ export function About(): JSX.Element {
         </div>
     );
 }
+
+export default About;

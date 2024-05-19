@@ -1,4 +1,4 @@
-import { Routing } from "../../RoutingArea/Routing/Routing";
+import { Routing } from "../Routing/Routing";
 import { Copyrights } from "../Copyrights/Copyrights";
 import { Header } from "../Header/Header";
 import { Menu } from "../Menu/Menu";
@@ -18,7 +18,7 @@ export function Layout(): JSX.Element {
         <Routing></Routing>
       </main>
       <footer>
-        <Copyrights/>
+        <Copyrights />
       </footer>
     </div>
   );
