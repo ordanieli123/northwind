@@ -22,7 +22,7 @@ export function ProductCard(props: ProductCardProps): JSX.Element {
                 Stock: {props.product.stock}
             </div>
             <div>
-                <img src={props.product.imgUrl} />
+                <img src={props.product.imageUrl} />
             </div>
         </div>
     );

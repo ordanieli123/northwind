@@ -23,7 +23,7 @@ export function ProductDetails(): JSX.Element {
             <h3>Name: {product?.name}</h3>
             <h3>Price: {product?.price}</h3>
             <h3>Stock: {product?.stock}</h3>
-            <img src={product?.imgUrl} />
+            <img src={product?.imageUrl} />
         </div>
     );
 }

@@ -3,7 +3,7 @@ export class ProductModel {
     public name:string;
     public price:number;
     public stock:number;
-    public imgUrl:string;
+    public imageUrl:string;
 	
 }
 
