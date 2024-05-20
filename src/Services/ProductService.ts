@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 import { ProductModel } from "../Models/ProductModel";
 import { appConfig } from "../Utils/AppConfig";
 
@@ -17,7 +17,8 @@ class ProductService {
     }
 
     public async addProduct(product:ProductModel){
-        const response = await axios.post<ProductModel>(appConfig.productsUrl,product);
+        const options:AxiosRequestConfig = {headers:{"Content-Type":"multipart/form-data"}}
+        const response = await axios.post<ProductModel>(appConfig.productsUrl,product,options);
         const dbProduct=response.data;
         console.log(dbProduct);
     }
