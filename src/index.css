@@ -24,3 +24,9 @@ form>input,form>button{
   margin-bottom: 20px;
   box-sizing: border-box;
 }
+.error{
+  color: red;
+  position: absolute;
+  margin-left: 40px;
+  font-weight: bold;
+}

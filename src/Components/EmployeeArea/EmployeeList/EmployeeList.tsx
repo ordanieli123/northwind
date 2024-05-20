@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./EmployeeList.css";
 import { EmployeeModel } from "../../../Models/EmployeeModel";
 import { employeeService } from "../../../Services/EmployeeService";
+import { notify } from "../../../Utils/Notify";
 
 export function EmployeeList(): JSX.Element {
 
@@ -11,10 +12,7 @@ export function EmployeeList(): JSX.Element {
 
         employeeService.getAllEmployees()
             .then(dbEmployees => setEmployees(dbEmployees))
-            .catch(err => alert(err.message));
-
-
-
+            .catch(err => notify.error(err));
     }, []);
 
     return (

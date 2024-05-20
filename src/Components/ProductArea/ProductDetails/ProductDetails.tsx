@@ -3,6 +3,7 @@ import "./ProductDetails.css";
 import { useEffect, useState } from "react";
 import { productService } from "../../../Services/ProductService";
 import { ProductModel } from "../../../Models/ProductModel";
+import { notify } from "../../../Utils/Notify";
 
 export function ProductDetails(): JSX.Element {
 
@@ -15,7 +16,7 @@ export function ProductDetails(): JSX.Element {
     useEffect(() => {
         productService.getOneProduct(id)
             .then(dbProduct => setProduct(dbProduct))
-            .catch(err => alert(err.message));
+            .catch(err => notify.error(err));
     }, []);
 
     return (
