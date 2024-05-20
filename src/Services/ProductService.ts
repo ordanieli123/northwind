@@ -30,6 +30,18 @@ class ProductService {
        const action=productActions.addProduct(dbProduct);
        store.dispatch(action);
     }
+    public async editProduct(product:ProductModel){
+        const options:AxiosRequestConfig = {headers:{"Content-Type":"multipart/form-data"}}
+        const response = await axios.put<ProductModel>(appConfig.productsUrl+product.id,product,options);
+        const dbProduct=response.data;
+       const action=productActions.updateProduct(dbProduct);
+       store.dispatch(action);
+    }
+    public async deleteProduct(product:number){
+        const response = await axios.delete<ProductModel>(appConfig.productsUrl+product);
+       const action=productActions.deleteProduct(product);
+       store.dispatch(action);
+    }
 
 }
 

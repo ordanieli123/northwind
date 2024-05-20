@@ -24,7 +24,7 @@ export class ProductModel {
         max: { value: 100, message: "Stock need to be less then 100" }
 }
     public static imageValidation:RegisterOptions ={
-        required: { value: true, message: "Missing image." },
+      //  required: { value: true, message: "Missing image." },
 }
 }
 
