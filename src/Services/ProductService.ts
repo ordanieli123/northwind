@@ -16,6 +16,12 @@ class ProductService {
         return product;
     }
 
+    public async addProduct(product:ProductModel){
+        const response = await axios.post<ProductModel>(appConfig.productsUrl,product);
+        const dbProduct=response.data;
+        console.log(dbProduct);
+    }
+
 }
 
 export const productService = new ProductService();

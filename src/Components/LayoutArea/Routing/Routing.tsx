@@ -6,6 +6,7 @@ import { PageNotFound } from "../PageNotFound/PageNotFound";
 import { Suspense, lazy } from "react";
 import { ProductDetails } from "../../ProductArea/ProductDetails/ProductDetails";
 import { EmployeeList } from "../../EmployeeArea/EmployeeList/EmployeeList";
+import { AddProduct } from "../../ProductArea/AddProduct/AddProduct";
 
 export function Routing(): JSX.Element {
   const LazyAbout = lazy(() => import("../../AboutArea/About/About"))
@@ -18,6 +19,7 @@ export function Routing(): JSX.Element {
         <Route path="/home" element={<Home />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/products/details/:prodId" element={<ProductDetails />} />
+        <Route path="/products/new" element={<AddProduct />} />
         <Route path="/employees" element={<EmployeeList />} />
 
         <Route path="/about" element={suspenseAbout} />

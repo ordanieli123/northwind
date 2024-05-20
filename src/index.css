@@ -9,3 +9,18 @@ background-image:linear-gradient(rgb(169, 135, 135),white,pink)
 a {
 color: blue;
 }
+form{
+  width: 250px;
+  text-align: center;
+  margin: 20 auto;
+  padding: 20px;
+  box-shadow: 10px 10px 10px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+form>input,form>button{
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}

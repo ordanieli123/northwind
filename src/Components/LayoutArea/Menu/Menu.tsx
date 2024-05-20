@@ -6,6 +6,7 @@ export function Menu(): JSX.Element {
         <div className="Menu">
             <NavLink to="/home">Home</NavLink>
             <NavLink to="/products">products</NavLink>
+            <NavLink to="/products/new">AddProduct</NavLink>
             <NavLink to="/employees">employees</NavLink>
             <NavLink to="/about">about</NavLink>
         </div>
