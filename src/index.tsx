@@ -5,14 +5,19 @@ import { Layout } from "./Components/LayoutArea/Layout/Layout";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./Redux/store";
+import { interceptor } from "./Utils/Interceptor";
+import { MiniThemeContext, siteMiniTheme } from "./Utils/MiniTheme";
 
+interceptor.createInterceptor();
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <BrowserRouter>
   <Provider store={store}>
-  <Layout />
+    <MiniThemeContext.Provider value={siteMiniTheme} >
+    <Layout />
+    </MiniThemeContext.Provider>
   </Provider>
 
   </BrowserRouter>

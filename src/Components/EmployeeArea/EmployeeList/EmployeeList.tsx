@@ -23,7 +23,7 @@ export function EmployeeList(): JSX.Element {
                     title:{e.title} <br />
                     birthday:{e.birthDate.toLocaleString()} <br />
                     <div>
-                        <img src={e.imageUrl} />
+                    <img src={e.imageUrl} />
                     </div>
                 </span>
                 <br />
