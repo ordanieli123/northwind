@@ -22,8 +22,9 @@ export function EditProduct(): JSX.Element {
     }, []);
     async function sendToDb(product: ProductModel) {
         try {
+            product.id=id;
             product.image = (product.image as unknown as FileList)[0];
-            await productService.editProduct(product)
+            await productService.updateProduct(product)
             notify.success("product has been updated")
             navigate('/products');
         } catch (err: any) {
