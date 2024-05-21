@@ -1,5 +1,6 @@
-import { PayloadAction } from "@reduxjs/toolkit";
+import { Action, PayloadAction } from "@reduxjs/toolkit";
 import { ProductModel } from "../Models/ProductModel";
+import { UserModel } from "../Models/UserModel";
 
 export function initProducts(previousState:ProductModel[], action:PayloadAction<ProductModel[]>){
     const newState :ProductModel[] = action.payload;
@@ -30,4 +31,18 @@ export function deleteProduct(previousState:ProductModel[], action:PayloadAction
     }
     return newState;
 
+}
+
+export function registerUser(previousState:UserModel,action:PayloadAction<UserModel>){
+    const newState :UserModel = action.payload;
+    return newState;
+}
+
+export function loginUser(previousState:UserModel,action:PayloadAction<UserModel>){
+    const newState :UserModel = action.payload;
+    return newState;
+}
+export function logoutUser(previousState:UserModel,action:Action){
+    const newState :UserModel =null;
+    return newState;
 }
