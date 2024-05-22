@@ -5,6 +5,8 @@ import { productService } from "../../../Services/ProductService";
 import { ProductModel } from "../../../Models/ProductModel";
 import { notify } from "../../../Utils/Notify";
 import { NavLink } from "react-router-dom";
+import { Gpt } from "../../ChatGptArea/Gpt/Gpt";
+import { ChatGptDescription } from "../ChatGptDescription/ChatGptDescription";
 
 export function ProductDetails(): JSX.Element {
 
@@ -33,6 +35,7 @@ export function ProductDetails(): JSX.Element {
             <h3>Price: {product?.price}</h3>
             <h3>Stock: {product?.stock}</h3>
             <img src={product?.imageUrl} />
+            <ChatGptDescription product={product} />
 
             <br></br>
             <NavLink to="/products">Back</NavLink>

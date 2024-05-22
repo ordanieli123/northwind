@@ -10,7 +10,7 @@ import { MiniThemeContext, siteMiniTheme } from "./Utils/MiniTheme";
 import { ThemeProvider } from "@mui/material";
 import { muiTheme } from "./Utils/MuiTheme";
 
-interceptor.createInterceptor();
+// interceptor.createInterceptor();
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
