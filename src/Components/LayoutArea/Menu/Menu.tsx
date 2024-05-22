@@ -11,6 +11,7 @@ export function Menu(): JSX.Element {
             <NavLink to="/employees">Employees</NavLink>
             <NavLink to="/employees/new">AddEmployee</NavLink>
             <NavLink to="/about">About</NavLink>
+            <NavLink to="/about/contact-us">Contact us</NavLink>
             <TotalProducts></TotalProducts>
         </div>
     );
